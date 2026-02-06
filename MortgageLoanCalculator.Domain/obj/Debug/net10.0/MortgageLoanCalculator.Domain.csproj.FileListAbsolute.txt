@@ -1,0 +1,24 @@
+C:\Users\annap\Code\MortgageLoanCalculator\MortgageLoanCalculator.Domain\bin\Debug\net10.0\MortgageLoanCalculator.Domain.deps.json
+C:\Users\annap\Code\MortgageLoanCalculator\MortgageLoanCalculator.Domain\bin\Debug\net10.0\MortgageLoanCalculator.Domain.dll
+C:\Users\annap\Code\MortgageLoanCalculator\MortgageLoanCalculator.Domain\bin\Debug\net10.0\MortgageLoanCalculator.Domain.pdb
+C:\Users\annap\Code\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\annap\Code\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.AssemblyInfoInputs.cache
+C:\Users\annap\Code\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.AssemblyInfo.cs
+C:\Users\annap\Code\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.csproj.CoreCompileInputs.cache
+C:\Users\annap\Code\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.dll
+C:\Users\annap\Code\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\refint\MortgageLoanCalculator.Domain.dll
+C:\Users\annap\Code\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.pdb
+C:\Users\annap\Code\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\ref\MortgageLoanCalculator.Domain.dll
+C:\Users\annap\Code\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.sourcelink.json
+C:\Users\annap\SNHU\CS-499\Module 5\MortgageLoanCalculator-enhancement 1\MortgageLoanCalculator\MortgageLoanCalculator.Domain\bin\Debug\net10.0\MortgageLoanCalculator.Domain.deps.json
+C:\Users\annap\SNHU\CS-499\Module 5\MortgageLoanCalculator-enhancement 1\MortgageLoanCalculator\MortgageLoanCalculator.Domain\bin\Debug\net10.0\MortgageLoanCalculator.Domain.dll
+C:\Users\annap\SNHU\CS-499\Module 5\MortgageLoanCalculator-enhancement 1\MortgageLoanCalculator\MortgageLoanCalculator.Domain\bin\Debug\net10.0\MortgageLoanCalculator.Domain.pdb
+C:\Users\annap\SNHU\CS-499\Module 5\MortgageLoanCalculator-enhancement 1\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\annap\SNHU\CS-499\Module 5\MortgageLoanCalculator-enhancement 1\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.AssemblyInfoInputs.cache
+C:\Users\annap\SNHU\CS-499\Module 5\MortgageLoanCalculator-enhancement 1\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.AssemblyInfo.cs
+C:\Users\annap\SNHU\CS-499\Module 5\MortgageLoanCalculator-enhancement 1\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.csproj.CoreCompileInputs.cache
+C:\Users\annap\SNHU\CS-499\Module 5\MortgageLoanCalculator-enhancement 1\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.sourcelink.json
+C:\Users\annap\SNHU\CS-499\Module 5\MortgageLoanCalculator-enhancement 1\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.dll
+C:\Users\annap\SNHU\CS-499\Module 5\MortgageLoanCalculator-enhancement 1\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\refint\MortgageLoanCalculator.Domain.dll
+C:\Users\annap\SNHU\CS-499\Module 5\MortgageLoanCalculator-enhancement 1\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\MortgageLoanCalculator.Domain.pdb
+C:\Users\annap\SNHU\CS-499\Module 5\MortgageLoanCalculator-enhancement 1\MortgageLoanCalculator\MortgageLoanCalculator.Domain\obj\Debug\net10.0\ref\MortgageLoanCalculator.Domain.dll
