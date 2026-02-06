@@ -1,0 +1,145 @@
+﻿@*
+    Mortgage Calculation Results
+    Displays calculated loan metrics, monthly payment breakdown, and approval/denial decision.
+*@
+@model MortgageResultViewModel
+@{
+    ViewData["Title"] = "Result";
+}
+
+<h1 class="display-6">Mortgage Result</h1>
+<p><i>This calculator assumes closing costs are financed into the loan.</i></p>
+
+@* Borrower and Basic Loan Info *@
+<table class="table table-striped">
+    <colgroup>
+        <col style="width: 55%;">
+        <col style="width: 45%;">
+    </colgroup>
+    <thead>
+        <tr>
+            <th colspan="2">Borrower Information</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Borrower</td>
+            <td>@Model.BorrowerName</td>
+        </tr>
+        <tr>
+            <td>Purchase Price</td>
+            <td>@Model.PurchasePrice.ToString("C")</td>
+        </tr>
+        <tr>
+            <td>Down Payment</td>
+            <td>@Model.DownPayment.ToString("C")</td>
+        </tr>
+        <tr>
+            <td>Loan Term</td>
+            <td>@Html.DisplayFor(m => m.Term)</td>
+        </tr>
+        <tr>
+            <td>Interest Rate</td>
+            <td>@Model.AnnualInterestRate.ToString("0.00")%</td>
+        </tr>
+    </tbody>
+</table>
+
+@* Calculated Loan Amounts and Equity *@
+<table class="table table-striped">
+    <colgroup>
+        <col style="width: 55%;">
+        <col style="width: 45%;">
+    </colgroup>
+    <thead>
+        <tr>
+            <th colspan="2">Loan Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Total Financed Amount</td>
+            <td>@Model.Calculation.LoanAmount.ToString("C")</td>
+        </tr>
+        <tr>
+            <td>Origination Fee</td>
+            <td>@Model.Calculation.OriginationFee.ToString("C")</td>
+        </tr>
+        <tr>
+            <td>Closing Costs</td>
+            <td>@Model.Calculation.ClosingCosts.ToString("C")</td>
+        </tr>
+        <tr>
+            <td>Equity Percentage</td>
+            <td>@Model.Calculation.EquityPercentage.ToString("0.00")%</td>
+        </tr>
+        <tr>
+            <td>Equity Value</td>
+            <td>@Model.Calculation.EquityValue.ToString("C")</td>
+        </tr>
+    </tbody>
+</table>
+
+@* Monthly Payment Breakdown (P&I, taxes, insurance, HOA, PMI) *@
+<table class="table table-striped">
+    <colgroup>
+        <col style="width: 55%;">
+        <col style="width: 45%;">
+    </colgroup>
+    <thead>
+        <tr>
+            <th colspan="2">Monthly Payment Breakdown</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Monthly Principal & Interest</td>
+            <td>@Model.Calculation.MonthlyPaymentPI.ToString("C")</td>
+        </tr>
+        <tr>
+            <td>Monthly Property Tax</td>
+            <td>@Model.Calculation.PropertyTaxPerMonth.ToString("C")</td>
+        </tr>
+        <tr>
+            <td>Monthly Loan Insurance</td>
+            <td>@Model.Calculation.LoanInsurancePerMonth.ToString("C")</td>
+        </tr>
+        <tr>
+            <td>Monthly Homeowners Insurance</td>
+            <td>@Model.Calculation.HomeownersInsurancePerMonth.ToString("C")</td>
+        </tr>
+        <tr>
+            <td>Monthly HOA Fee</td>
+            <td>@Model.MonthlyHoaFee.ToString("C")</td>
+        </tr>
+        <tr>
+            <td>Total Monthly Payment</td>
+            <td>@Model.Calculation.MonthlyPaymentTotalWithFees.ToString("C")</td>
+        </tr>
+    </tbody>
+</table>
+
+@* Approval/Denial Decision *@
+<p>
+    <strong>Decision:</strong>
+    @if (Model.Decision.Decision == "APPROVE")
+    {
+        <span class="badge bg-success">APPROVED</span>
+    }
+    else
+    {
+        <span class="badge bg-danger">DENIED</span>
+    }
+</p>
+<p class="text-muted">
+    Monthly payment represents
+    <strong>@Model.MonthlyPaymentIncomeRatio.ToString("0.0")%</strong>
+    of monthly income
+</p>
+
+<p><i>Results are estimates and not a loan commitment.</i></p>
+
+<div class="d-grid gap-2 d-md-flex">
+    <a asp-action="Create" class="btn btn-secondary" style="width: 150px;">Adjust Values</a>
+    <a asp-controller="Loan" asp-action="Reset" class="btn btn-secondary" style="width: 150px;">Reset</a>
+</div>

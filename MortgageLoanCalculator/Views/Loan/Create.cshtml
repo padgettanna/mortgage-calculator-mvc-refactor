@@ -1,0 +1,123 @@
+﻿@*
+    Mortgage Loan Input Form
+    Collects borrower information, property details, and loan terms for calculation.
+*@
+@using MortgageLoanCalculator.Domain
+@model MortgageLoanCalculator.Domain.Loan
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h1 class="display-6">Enter Loan Information</h1>
+                <a asp-controller="Loan" asp-action="Reset" class="btn btn-secondary">Reset</a>
+            </div>
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    @* Left Column: Borrower and Loan Terms *@
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label asp-for="BorrowerFirstName" class="form-label">First Name</label>
+                            <input asp-for="BorrowerFirstName" class="form-control" />
+                            <span asp-validation-for="BorrowerFirstName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="BorrowerLastName" class="form-label">Last Name</label>
+                            <input asp-for="BorrowerLastName" class="form-control" />
+                            <span asp-validation-for="BorrowerLastName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="AnnualIncome" class="form-label">Annual Income</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input asp-for="AnnualIncome" class="form-control" type="number" placeholder="Gross annual income before taxes" step="0.01" />
+                            </div>
+                            <span asp-validation-for="AnnualIncome" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Term" class="form-label">Loan Term</label>
+                            <select asp-for="Term" class="form-select" asp-items="Html.GetEnumSelectList<LoanTerm>()">
+                                <option value="">-- Select Loan Term --</option>
+                            </select>
+                            <span asp-validation-for="Term" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="NumPaymentsPerYear" class="form-label">Payments Per Year</label>
+                            <select asp-for="NumPaymentsPerYear" class="form-select" asp-items="Html.GetEnumSelectList<PaymentsPerYear>()">
+                                <option value="">-- Select Number of Payments Per Year --</option>
+                            </select>
+                            <span asp-validation-for="NumPaymentsPerYear" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="AnnualInterestRate" class="form-label">Annual Interest Rate</label>
+                            <div class="input-group">
+                                <input asp-for="AnnualInterestRate" class="form-control" type="number" placeholder="e.g. 5.25" step="0.01" />
+                                <span class="input-group-text">%</span>
+                            </div>
+                            <span asp-validation-for="AnnualInterestRate" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    @* Right Column: Property Details *@
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label asp-for="MarketValue" class="form-label">Market Value</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input asp-for="MarketValue" class="form-control" type="number" step="0.01" />
+                            </div>
+                            <span asp-validation-for="MarketValue" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="PurchasePrice" class="form-label">Purchase Price</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input asp-for="PurchasePrice" class="form-control" type="number" step="0.01" />
+                            </div>
+                            <span asp-validation-for="PurchasePrice" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="DownPayment" class="form-label">Down Payment</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                    <input asp-for="DownPayment" class="form-control" type="number" step="0.01" />
+                             </div>
+                             <span asp-validation-for="DownPayment" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="AnnualHoaFee" class="form-label">Annual HOA Fee</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                    <input asp-for="AnnualHoaFee" class="form-control" type="number" step="0.01" />
+                            </div>
+                            <span asp-validation-for="AnnualHoaFee" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg">Calculate Mortgage</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
