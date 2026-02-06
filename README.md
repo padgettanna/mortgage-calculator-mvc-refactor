@@ -1,136 +1,48 @@
-# Mortgage Calculator Web Application
+# Mortgage Calculator – ASP.NET Core MVC Refactor
 
-A mortgage loan calculator web application built with C# and ASP.NET Core MVC. This application helps users calculate monthly mortgage payments, determine loan eligibility, and understand the financial implications of their home purchase.
+This repository contains an early web-based version of a Mortgage Calculator application refactored from a console-based C# program into an ASP.NET Core MVC application.
 
-## Project Status
+This snapshot represents the **software design and engineering enhancement** stage of the project and focuses on architecture, separation of concerns, and maintainability rather than persistence or authentication.
 
-This project is actively under development as part of a Computer Science capstone.
-It originated as a console-based mortgage calculator and is being incrementally
-refactored and expanded into a full ASP.NET Core MVC web application.
+## Project Context
+
+The Mortgage Calculator was originally developed as a console application during the Microsoft Software and Systems Academy (MSSA).  
+As part of a Computer Science capstone, the application was refactored into a web application to better align with modern software engineering practices.
+
+This repository captures the application **before database integration** and user authentication were added.
+
+A more complete version of the application, including database persistence and user-specific calculation history, is available in the main project repository.
+
+## Focus of This Version
+
+This version of the application demonstrates:
+
+- Refactoring legacy-style code into an ASP.NET Core MVC architecture
+- Separation of concerns between controllers, domain logic, and views
+- Encapsulation of mortgage calculation logic in a domain layer
+- Model-level input validation
+- Clean, maintainable project structure aligned with industry practices
 
 ## Features
 
-- **Mortgage Payment Calculator**: Calculate monthly mortgage payments including principal and interest
-- **Loan Eligibility Assessment**: Determine if the borrower qualifies based on income-to-payment ratio
-- **Comprehensive Fee Calculation**: Includes:
-  - Origination fees
-  - Closing costs
-  - Property tax
-  - Homeowners insurance
-  - HOA fees
-  - Private Mortgage Insurance (PMI) when applicable
-- **Multiple Loan Terms**: Support for different loan term lengths
-- **User-Friendly Interface**: Clean, responsive design for easy data entry
-- **Results Flow**: Temporarily preserves loan input to support recalculation and adjustment
+- Mortgage payment calculation
+- Loan eligibility evaluation based on payment-to-income ratio
+- Support for multiple loan terms and payment schedules
+- User-friendly web interface for data entry and results display
 
 ## Technology Stack
 
-- **Framework**: ASP.NET Core MVC
-- **.NET Version**: .NET 10
-- **Architecture**: Clean architecture with separate domain layer
+- ASP.NET Core MVC
+- C#
+- .NET 10
+- Razor Views
+- Bootstrap (basic styling)
 
-## Project Structure
+## Notes
 
-MortgageLoanCalculator/
-- MortgageLoanCalculator/
-  - Controllers/
-    - HomeController.cs
-    - LoanController.cs
-  - Models/       
-    - MortgageResultViewModel.cs
-    - ErrorViewModel.cs
-  - Views/
-    - Home/
-    - Loan/
-    - Shared/
-  - Program.cs
-
-- MortgageLoanCalculator.Domain/
-  - Loan.cs
-  - LoanCalculator.cs
-  - LoanDecisionService.cs
-  - MortgageCalculatorConstants.cs
-
-## Getting Started
-
-### Prerequisites
-
-- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or later
-- A code editor (Visual Studio 2025, Visual Studio Code, or Rider)
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/padgettanna/Mortgage-Calculator-Web.git
-cd Mortgage-Calculator-Web
-```
-
-2. Restore dependencies:
-```bash
-dotnet restore
-```
-
-3. Build the project:
-```bash
-dotnet build
-```
-
-4. Run the application:
-```bash
-cd MortgageLoanCalculator
-dotnet run
-```
-
-5. Open your browser and navigate to `https://localhost:5001` or the URL shown in the terminal
-
-## Usage
-
-1. **Enter Borrower Information**:
-   - First and Last Name
-   - Annual Income
-
-2. **Enter Loan Details**:
-   - Purchase Price
-   - Down Payment
-   - Annual Interest Rate
-   - Loan Term (years)
-   - Annual HOA Fees (if applicable)
-
-3. **Calculate**: Click the calculate button to see:
-   - Monthly payment breakdown (Principal & Interest)
-   - Total monthly payment including all fees
-   - Payment-to-income ratio
-   - Loan eligibility decision
-   - Equity percentage and value
-
-4. **Reset**: Clear the form to start a new calculation
-
-## Key Components
-
-### LoanCalculator
-Handles all mortgage calculation logic including:
-- Loan amount with origination fees and closing costs
-- Monthly payment (Principal & Interest)
-- PMI calculations
-- Property tax and homeowners insurance
-- Total monthly payment
-
-### LoanDecisionService
-Evaluates loan eligibility based on debt-to-income ratio standards
-
-### MortgageCalculatorConstants
-Stores financial constants such as:
-- Origination fee percentage
-- Closing costs
-- Property tax rates
-- Insurance rates
-- PMI thresholds
+This repository is intentionally limited in scope to highlight architectural and design improvements.
+Database persistence, authentication, and historical calculation tracking are implemented in later versions of the application.
 
 ## Author
 
 Anna Padgett
-
-## Acknowledgments
-
-Built with ASP.NET Core and modern web development best practices.
